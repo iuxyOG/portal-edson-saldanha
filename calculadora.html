@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora Mestre – Shopee | Edson Saldanha</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/webp" href="images/favicon-value.webp">
+  <link rel="stylesheet" href="css/calculadora.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a href="index.html" class="home-btn">Início</a>
+
+  <div class="brand">
+    <div class="avatar-circle">
+      <img src="images/edson-avatar.jpg" alt="Edson Saldanha">
+    </div>
+    <span class="titulo-laranja">Calculadora Mestre – Shopee</span>
+  </div>
+</header>
+
+<main class="page">
+  <section class="box">
+    <header class="box-header">
+      <h1>Simule sua margem na Shopee</h1>
+      <p>Defina a margem de lucro que deseja e descubra o preço de venda ideal para cada produto.</p>
+    </header>
+
+    <div class="mode-switch">
+      <button class="mode-btn active" data-mode="normal">Normal (14%)</button>
+      <button class="mode-btn" data-mode="frete">Frete Grátis (20%)</button>
+    </div>
+
+    <div class="grid">
+      <div class="campo">
+        <label for="custo">Custo do produto (R$)</label>
+        <input id="custo" type="number" step="0.01" placeholder="Custo do fornecedor">
+      </div>
+
+      <div class="campo">
+        <label for="extras">Custos extras (R$)</label>
+        <input id="extras" type="number" step="0.01" placeholder="Embalagem, etiquetas, etc.">
+      </div>
+
+      <div class="campo">
+        <label for="imposto">Imposto (%)</label>
+        <input id="imposto" type="number" step="0.1" placeholder="Ex: 6" value="6">
+      </div>
+
+      <div class="campo margem-field">
+        <label for="margem">Margem de lucro desejada (%)</label>
+        <input id="margem" type="range" min="5" max="80" step="1" value="20">
+        <span class="margem-valor" id="margemLabel">20%</span>
+      </div>
+    </div>
+
+    <p class="hint">
+      A taxa fixa de R$ 4,00 é considerada automaticamente para pedidos abaixo de R$ 79,00.
+      Ajuste a margem para ver o preço de venda sugerido.
+    </p>
+  </section>
+
+  <section class="box resultados">
+    <header class="box-header">
+      <h2>Resultado da simulação</h2>
+    </header>
+
+    <div class="linha">
+      <span>Preço de venda sugerido:</span>
+      <strong id="rpreco">R$ 0,00</strong>
+    </div>
+
+    <div class="linha">
+      <span>Custo do produto:</span>
+      <strong id="rcusto">R$ 0,00</strong>
+    </div>
+
+    <div class="linha">
+      <span>Custos extras:</span>
+      <strong id="rextras">R$ 0,00</strong>
+    </div>
+
+    <div class="linha">
+      <span>Imposto (%):</span>
+      <strong id="rimposto">0,00%</strong>
+    </div>
+
+    <div class="linha">
+      <span>Taxa Shopee (%):</span>
+      <strong id="taxaPercent">14%</strong>
+    </div>
+
+    <div class="linha">
+      <span>Taxa Shopee (R$):</span>
+      <strong id="taxaNormal">R$ 0,00</strong>
+    </div>
+
+    <div class="linha">
+      <span>Taxa fixa Shopee:</span>
+      <strong id="taxaFixa">R$ 0,00</strong>
+    </div>
+
+    <div class="linha">
+      <span>Custos totais:</span>
+      <strong id="custosTotais">R$ 0,00</strong>
+    </div>
+
+    <div class="linha destaque">
+      <span>Lucro por venda:</span>
+      <strong id="lucro">R$ 0,00</strong>
+    </div>
+  </section>
+</main>
+
+<script src="js/calculadora.js"></script>
+</body>
+</html>

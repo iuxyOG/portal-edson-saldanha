@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Etiquetas 10×15 – Shopee | Portal do Edson</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/webp" href="images/favicon-value.webp">
+  <link rel="stylesheet" href="css/etiquetas.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<header class="topbar">
+  <a href="index.html" class="home-btn">Início</a>
+
+  <div class="brand">
+    <div class="avatar-circle">
+      <img src="images/edson-avatar.jpg" alt="Edson Saldanha">
+    </div>
+    <span class="titulo-laranja">Corte automático de etiquetas 10×15</span>
+  </div>
+</header>
+
+<main class="page">
+  <section class="box">
+    <header class="box-header">
+      <h1>Envie o PDF padrão da Shopee</h1>
+      <p>O sistema tenta identificar automaticamente as divisões das etiquetas e gerar um PDF em 10×15 cm, pronto para impressão.</p>
+    </header>
+
+    <div class="upload-area">
+      <input type="file" id="pdfFile" accept="application/pdf">
+      <p class="hint">
+        Use o PDF original de etiquetas gerado na Shopee. O corte automático tenta detectar 1, 2 ou 4 etiquetas por página.
+      </p>
+    </div>
+
+    <div class="botoes">
+      <button id="btnProcess">Processar etiquetas</button>
+      <button id="btnPDF">Baixar PDF 10×15</button>
+    </div>
+  </section>
+
+  <section class="box">
+    <header class="box-header">
+      <h2>Pré-visualização das etiquetas detectadas</h2>
+    </header>
+    <div id="preview" class="preview">
+      Nenhuma etiqueta carregada ainda.
+    </div>
+  </section>
+</main>
+
+<script src="js/etiquetas.js"></script>
+</body>
+</html>

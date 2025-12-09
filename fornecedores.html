@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Base de Fornecedores | Portal do Edson</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/webp" href="images/favicon-value.webp">
+  <link rel="stylesheet" href="css/fornecedores.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a href="index.html" class="home-btn">Início</a>
+
+  <div class="brand">
+    <div class="avatar-circle">
+      <img src="images/edson-avatar.jpg" alt="Edson Saldanha">
+    </div>
+    <span class="titulo-laranja">Base de Fornecedores (Exemplo)</span>
+  </div>
+</header>
+
+<div class="container">
+  <div class="controls">
+    <input id="fProduto" placeholder="Produto">
+    <select id="fCategoria">
+      <option value="">Categoria</option>
+      <option value="Ferramentas">Ferramentas</option>
+      <option value="Calçados">Calçados</option>
+      <option value="PC">Peças de PC</option>
+      <option value="Outros">Outros</option>
+    </select>
+    <select id="fEstado">
+      <option value="">Estado</option>
+    </select>
+    <select id="fCidade">
+      <option value="">Cidade</option>
+    </select>
+    <button id="btnBuscar" class="btn">Buscar</button>
+    <button id="btnLimpar" class="btn secondary">Limpar</button>
+  </div>
+
+  <div class="grid" id="lista"></div>
+</div>
+
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <span class="close-modal" id="closeModal">&times;</span>
+    <img id="modalImg" src="" alt="">
+    <h3 id="modalNome"></h3>
+    <p id="modalDesc"></p>
+    <p><b id="modalFornecedor"></b></p>
+    <p id="modalCidadeEstado"></p>
+    <p id="modalPreco"></p>
+    <p id="modalCategoria"></p>
+    <button id="btnLigar">Ligar/WhatsApp</button>
+  </div>
+</div>
+
+<script src="js/fornecedores.js"></script>
+</body>
+</html>

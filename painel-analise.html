@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel de Vendas – Shopee | Edson Saldanha</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/webp" href="images/favicon-value.webp">
+  <link rel="stylesheet" href="css/painel-analise.css">
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+<header class="topbar">
+  <a href="index.html" class="home-btn">Início</a>
+
+  <div class="brand">
+    <div class="avatar-circle">
+      <img src="images/edson-avatar.jpg" alt="Edson Saldanha">
+    </div>
+    <span class="titulo-laranja">Painel de Análise de Vendas</span>
+  </div>
+</header>
+
+<main class="page">
+  <section class="box">
+    <header class="box-header">
+      <h1>Suba o relatório da Shopee (XLSX)</h1>
+      <p>Use o relatório de produtos ou pedidos da Shopee para visualizar faturamento, unidades vendidas e top produtos.</p>
+    </header>
+
+    <div class="upload-area">
+      <input type="file" id="fileInput" accept=".xlsx,.xls">
+      <p class="hint">Dica: use o relatório "Visão geral do produto" ou "ParentSkuDetail" exportado da sua conta.</p>
+    </div>
+
+    <div class="resumo" id="resumoGeral" hidden>
+      <div>
+        <span>Faturamento total</span>
+        <strong id="fatTotal">R$ 0,00</strong>
+      </div>
+      <div>
+        <span>Unidades vendidas</span>
+        <strong id="qtdTotal">0</strong>
+      </div>
+      <div>
+        <span>Ticket médio</span>
+        <strong id="ticketMedio">R$ 0,00</strong>
+      </div>
+    </div>
+  </section>
+
+  <section class="box">
+    <header class="box-header">
+      <h2>Top produtos por faturamento</h2>
+    </header>
+    <div class="tabela-wrapper">
+      <table id="tabelaProdutos">
+        <thead>
+          <tr>
+            <th>Produto</th>
+            <th>Vendas</th>
+            <th>Faturamento</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="box">
+    <header class="box-header">
+      <h2>Distribuição de faturamento</h2>
+    </header>
+    <canvas id="graficoFat" height="140"></canvas>
+  </section>
+</main>
+
+<script src="js/painel-analise.js"></script>
+</body>
+</html>

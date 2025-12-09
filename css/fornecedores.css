@@ -1,0 +1,278 @@
+
+:root {
+  --orange: #ff7a00;
+  --orange-soft: #ffb25c;
+  --bg-body: #0f172a;
+  --bg-card: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #6b7280;
+  --border-soft: #e5e7eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #111827 0%, #020617 45%, #000 100%);
+  color: var(--text-main);
+}
+
+/* HEADER */
+
+.topbar {
+  background: rgba(2, 6, 23, 0.96);
+  border-bottom: 1px solid rgba(148,163,184,0.35);
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.home-btn {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--orange);
+  background: transparent;
+  color: #f97316;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.home-btn:hover {
+  background: var(--orange);
+  color: #111;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 2px solid var(--orange);
+}
+
+.avatar-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.titulo-laranja {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fed7aa;
+}
+
+/* CONTAINER */
+
+.container {
+  max-width: 1100px;
+  margin: 26px auto 36px;
+  padding: 0 18px;
+}
+
+/* CONTROLES */
+
+.controls {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+  padding: 14px;
+  border-radius: 14px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+}
+
+.controls input,
+.controls select {
+  padding: 9px 10px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  color: var(--text-main);
+  font-size: 0.9rem;
+  flex: 1;
+  min-width: 150px;
+}
+
+.controls input::placeholder {
+  color: var(--text-muted);
+}
+
+.controls select {
+  cursor: pointer;
+}
+
+.controls .btn {
+  background: linear-gradient(120deg, var(--orange), var(--orange-soft));
+  border: none;
+  color: #111827;
+  padding: 9px 14px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.9rem;
+  flex: 0 0 auto;
+}
+
+.controls .btn.secondary {
+  background: transparent;
+  color: #f97316;
+  border: 1px solid #fed7aa;
+}
+
+/* GRID */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+/* CARD */
+
+.card {
+  background: var(--bg-card);
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 24px rgba(15,23,42,0.12);
+  position: relative;
+  overflow: hidden;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: #fec89a;
+  box-shadow: 0 16px 36px rgba(15,23,42,0.18);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  display: block;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 4px 0 4px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.card p {
+  margin: 3px 0;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.card p b {
+  color: #111827;
+}
+
+.card button {
+  margin-top: 8px;
+  padding: 7px 11px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  background: linear-gradient(120deg, var(--orange), var(--orange-soft));
+  color: #111827;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* FAVORITO */
+
+.favorite {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 20px;
+  color: #fbbf24;
+}
+
+/* MODAL */
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(15,23,42,0.65);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  max-width: 480px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  color: #111827;
+}
+
+.modal-content img {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.modal-content h3 {
+  margin: 0 0 8px 0;
+}
+
+.modal-content p {
+  margin: 4px 0;
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #6b7280;
+}
+
+/* BOTÃO WHATS */
+
+#btnLigar {
+  margin-top: 14px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(120deg, #22c55e, #16a34a);
+  color: #022c22;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 640px) {
+  .controls {
+    padding: 10px;
+  }
+}
